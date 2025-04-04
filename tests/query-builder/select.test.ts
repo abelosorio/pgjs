@@ -1,4 +1,4 @@
-import QueryBuilder from '../../lib/query-builder/index.js'
+import QueryBuilder from '~/lib/query-builder'
 
 describe('Basic SELECT query', () => {
   it('should generate a query with 1 field', () => {

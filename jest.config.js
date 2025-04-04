@@ -1,4 +1,7 @@
 export default {
+  preset: 'ts-jest',
   testEnvironment: 'node',
-  transform: {}
+  moduleNameMapper: {
+    '^~/(.*)$': '<rootDir>/$1'
+  }
 }
