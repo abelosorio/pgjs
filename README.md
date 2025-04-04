@@ -5,6 +5,8 @@
 We’re building it in the open and inviting everyone to collaborate.  
 This is an **open source** and **software libre** project—your ideas, issues, and pull requests are welcome!
 
+Check out our Roadmap [here](ROADMAP.md)
+
 ---
 
 We're building **THE ORM for PostgreSQL**—tailored for modern JavaScript projects.
