@@ -1,4 +1,4 @@
-import QueryBuilder from '~/lib/query-builder'
+import QueryBuilder from '~/lib/builder'
 
 describe('Invalid chaining', () => {
   it('should not allow SELECT after WHERE', () => {

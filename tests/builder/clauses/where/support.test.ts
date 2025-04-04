@@ -1,4 +1,4 @@
-import QueryBuilder from '~/lib/query-builder'
+import QueryBuilder from '~/lib/builder'
 
 describe('WHERE clause support', () => {
   it('should generate a query with a WHERE clause and 1 param', () => {

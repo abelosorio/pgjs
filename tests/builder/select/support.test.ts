@@ -1,4 +1,4 @@
-import QueryBuilder from '~/lib/query-builder'
+import QueryBuilder from '~/lib/builder'
 
 describe('SELECT support', () => {
   it('should generate a query with 1 field', () => {
