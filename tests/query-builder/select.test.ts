@@ -1,6 +1,6 @@
 import QueryBuilder from '~/lib/query-builder'
 
-describe('Basic SELECT query', () => {
+describe('SELECT support', () => {
   it('should generate a query with 1 field', () => {
     const qb = new QueryBuilder()
 

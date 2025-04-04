@@ -13,6 +13,7 @@ export default function WithToSql<TBase extends Constructor<QueryBuilder>>(Base:
       let sql = `SELECT ${this.fieldsToString()}`
 
       sql += ` FROM ${this.table}`
+      sql += (this as any).getWhereClause()
       sql += ';'
 
       return sql
