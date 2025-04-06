@@ -1,4 +1,4 @@
-import QueryBuilder from './query-builder'
+import QueryBuilder from './queryBuilder/query-builder'
 
 import WithToSql from './mixins/with-to-sql'
 import WithWhere from './mixins/with-where'

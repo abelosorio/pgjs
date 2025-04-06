@@ -1,16 +1,11 @@
+import type QueryBuilder from '../queryBuilder/query-builder'
 import type { Constructor } from './types'
-import type QueryBuilder from '../query-builder'
 
 export default function WithToSql<TBase extends Constructor<QueryBuilder>>(Base: TBase) {
   return class extends Base {
-    fieldsToString (): string {
-      if (this.fields.length === 0) return '*'
 
-      return this.fields.join(', ')
-    }
-
-    toSql (): string {
-      let sql = `SELECT ${this.fieldsToString()}`
+    toSql(): string {
+      let sql = `${this.selectBuildBlock?.toSQL()}`
 
       sql += ` FROM ${this.table}`
       sql += (this as any).getWhereClause()
