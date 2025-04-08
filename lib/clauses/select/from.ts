@@ -1,8 +1,10 @@
+import toSql from '../../utils/to-sql'
 import { ResolverInput } from '../../types/resolver-input'
+import { Final } from '../../types/final'
+
 import whereResolver, { WhereResolver } from './where'
 
-export interface FromClause {
-  toSql: () => string
+export type FromClause = Final & {
   where: WhereResolver
 }
 
@@ -14,7 +16,7 @@ export default function from ({ sql: prevSql }: ResolverInput): FromResolver {
 
     return {
       where: whereResolver({ sql }),
-      toSql: () => sql + ';'
+      toSql: (options) => toSql(sql, options)
     }
   }
 }

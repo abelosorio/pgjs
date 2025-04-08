@@ -1,7 +1,8 @@
+import toSql from '../../utils/to-sql'
 import { ResolverInput } from '../../types/resolver-input'
+import { Final } from '../../types/final'
 
-export interface WhereClause {
-  toSql: () => string
+export type WhereClause = Final & {
   getParams: () => any[] | undefined
 }
 
@@ -13,7 +14,7 @@ export type WhereResolver = (
 export default function where({ sql }: ResolverInput): WhereResolver {
   return function (condition, params) {
     return {
-      toSql: () => sql + ` WHERE ${condition};`,
+      toSql: (options) => toSql(sql + ` WHERE ${condition}`, options),
       getParams: () => params
     }
   }

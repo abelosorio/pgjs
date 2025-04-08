@@ -1,6 +1,6 @@
 import fromResolver, { FromResolver } from '../clauses/select/from'
 
-interface SelectCommand {
+export type SelectCommand = {
   from: FromResolver
 }
 
