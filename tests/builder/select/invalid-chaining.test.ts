@@ -1,4 +1,4 @@
-import select from '../../../lib/commands/select'
+import { select } from '../../../lib'
 
 describe('Invalid chaining', () => {
   it('should not allow SELECT WHERE', () => {

@@ -1,4 +1,4 @@
-import select from '../../../lib/commands/select'
+import { select } from '../../../lib'
 
 describe('WHERE clause support', () => {
   it('should generate a query with a WHERE clause and 1 param', () => {

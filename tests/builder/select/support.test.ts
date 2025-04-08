@@ -1,4 +1,4 @@
-import select from '../../../lib/commands/select'
+import { select } from '../../../lib'
 
 describe('SELECT support', () => {
   it('should generate a query with 1 field', () => {
