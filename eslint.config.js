@@ -9,6 +9,7 @@ export default [
   eslint.configs.recommended,
   {
     files: ['**/*.ts'],
+    ignores: ['docs/templates/**/*.ts'],
     languageOptions: {
       parser: tseslintParser,
       parserOptions: {
