@@ -11,6 +11,10 @@ THE ORM for PostgreSQL
 - TypeScript-first design
 - Comprehensive documentation
 
+::: warning Development Status
+pgjs is currently in early development. Check our [Implementation Status](/implementation-status) to see what features are currently available.
+:::
+
 ## Getting Started
 
 ```bash
@@ -51,6 +55,8 @@ const complexQuery = select(
 Check out our comprehensive documentation:
 
 - [Introduction](/introduction)
+- [Architecture](/architecture)
+- [Implementation Status](/implementation-status)
 - [Select Queries](/select/)
   - [Basics](/select/basics)
   - [Joins](/select/joins)
