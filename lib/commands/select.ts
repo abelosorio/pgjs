@@ -1,7 +1,8 @@
 import { ResolverInput } from '~/lib/types/resolver-input'
 import fromResolver, { FromResolver } from '../clauses/select/from'
+import { Final } from '../types/final'
 
-export type SelectCommand = {
+export type SelectCommand = Final & {
   from: FromResolver
 }
 
@@ -15,8 +16,15 @@ export function _select(
     .filter((v) => Boolean(v))
     .join(' ')
 
+  const fromResolverFn = fromResolver({ sql })
+
   return {
-    from: fromResolver({ sql })
+    from: fromResolverFn,
+    toSql: (options) => {
+      const fromClause = fromResolverFn('')
+
+      return fromClause.toSql(options)
+    }
   }
 }
 
