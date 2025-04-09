@@ -2,10 +2,10 @@
 
 ## 🚧 **This is a WIP (Work In Progress) project.**  
 
-We’re building it in the open and inviting everyone to collaborate.  
+We're building it in the open and inviting everyone to collaborate.
 This is an **open source** and **software libre** project—your ideas, issues, and pull requests are welcome!
 
-Check out our Roadmap [here](ROADMAP.md)
+Check out our Roadmap [here](ROADMAP.md) and Architecture [here](architecture.md)
 
 ---
 
@@ -42,7 +42,7 @@ yarn add pgjs
 
 ## 🙌 How to Contribute
 
-We’re just getting started—and we’d love your help.
+We're just getting started—and we'd love your help.
 
 ### 🛠️ To contribute:
 
