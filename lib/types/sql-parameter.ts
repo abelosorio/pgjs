@@ -1,0 +1,1 @@
+export type SqlParameter = string | number | boolean | null | Date 
