@@ -1,6 +1,6 @@
-# SQL Builder Architecture
+# Architecture
 
-## Core Principles
+## Overview
 
 ### 1. Functional Programming
 - Use only pure functions, not classes.

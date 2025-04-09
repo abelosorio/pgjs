@@ -65,7 +65,7 @@ yarn add pgjs
 
 We're building pgjs in the open and invite everyone to collaborate. This is an open source and software libre project—your ideas, issues, and pull requests are welcome!
 
-Check out our [Roadmap](../ROADMAP.md) and [Architecture](../architecture.md) to learn more about the project's direction and design.
+Check out our [Roadmap](/roadmap) and [Architecture](/architecture) to learn more about the project's direction and design.
 
 ### How to Contribute
 
