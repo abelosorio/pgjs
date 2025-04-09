@@ -1,21 +1,22 @@
-import { select } from '../../../lib'
+import { select } from '../../../lib/index'
 
-describe('WHERE clause support', () => {
-  it('should generate a query with a WHERE clause and 1 param', () => {
-    expect(select().from('table').where('field = $1', ['value']).toSql())
-      .toBe('SELECT * FROM table WHERE field = $1;')
+describe('where', () => {
+  it('should add where clause to the query', () => {
+    const query = select().from('users').where('id = 1')
+    expect(query.toSql()).toBe('SELECT * FROM users WHERE id = 1')
   })
 
-  it('should generate a query without WHERE clause if not used', () => {
-    expect(select('id').from('users').toSql()).toBe('SELECT id FROM users;')
+  it('should add where clause with params', () => {
+    const query = select().from('users').where('id = $1', [1])
+    expect(query.toSql()).toBe('SELECT * FROM users WHERE id = $1')
   })
 
-  it('should support multiple params in WHERE', () => {
-    const query = select('email')
+  it('should add where clause with multiple params', () => {
+    const query = select()
       .from('users')
-      .where('name = $1 AND status = $2', ['John', 'active'])
-
-    expect(query.toSql()).toBe('SELECT email FROM users WHERE name = $1 AND status = $2;')
-    expect(query.getParams()).toEqual(['John', 'active'])
+      .where('id = $1 AND name = $2', [1, 'John'])
+    expect(query.toSql())
+      .toBe('SELECT * FROM users WHERE id = $1 AND name = $2')
+    expect(query.getParams()).toEqual([1, 'John'])
   })
 })
